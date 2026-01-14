@@ -3,12 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NEXT_DISABLE_ESLINT=1 NEXT_DISABLE_TYPECHECK=1 next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "oxlint",
-    "type-check": "tsc --noEmit",
-    "check-all": "npm run lint & npm run type-check & wait"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@supabase/ssr": "^0.6.1",
@@ -34,15 +33,5 @@
     "supabase": "2.34.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "unrs-resolver"
-    ],
-    "peerDependencyRules": {
-      "allowAny": [
-        "supabase"
-      ]
-    }
   }
 }
